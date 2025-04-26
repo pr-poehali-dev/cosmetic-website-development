@@ -12,11 +12,10 @@ const Header = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Главная
-                </NavigationMenuLink>
-              </Link>
+              {/* Исправление: используем NavigationMenuLink вместо вложенного Link */}
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+                <Link to="/">Главная</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
@@ -52,19 +51,17 @@ const Header = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/blog">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Блог
-                </NavigationMenuLink>
-              </Link>
+              {/* Исправление: используем NavigationMenuLink вместо вложенного Link */}
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+                <Link to="/blog">Блог</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/contacts">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Контакты
-                </NavigationMenuLink>
-              </Link>
+              {/* Исправление: используем NavigationMenuLink вместо вложенного Link */}
+              <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+                <Link to="/contacts">Контакты</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
